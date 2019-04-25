@@ -1,6 +1,6 @@
-/*Flores Molina Miguel de Jesús
+/*Flores Molina Miguel de JesÃºs
 Version 2017
-PRACTICA #08
+PRACTICA #11
 INTRUCCIONES:
 W--->La camara se mueve hacia enfrente
 S--->La camara se mueve hacia atras
@@ -535,7 +535,7 @@ void mesa(GLfloat xMadera, GLfloat yMadera, GLfloat zMadera, GLfloat xPosMesa, G
 void silla(GLfloat xMadera, GLfloat yMadera, GLfloat zMadera, GLfloat xPosSilla, GLfloat yPosSilla, GLfloat zPosSilla){
 	float numBarrotes = -2.9;
 	glPushMatrix();
-		//posicion y tamaño
+		//posicion y tamaÃ±o
 		glScalef(xMadera, yMadera, zMadera);
 		glTranslatef(xPosSilla, yPosSilla, zPosSilla);
 		//figura
@@ -768,13 +768,13 @@ void cuadro(void){
 void dibujaCama (GLfloat xMadera, GLfloat yMadera, GLfloat zMadera, GLfloat xPosCama, GLfloat yPosCama, GLfloat zPosCama)
 {			
 			glPushMatrix(); 
-			glScalef(xMadera, yMadera, zMadera); //posicion y tamaño 
+			glScalef(xMadera, yMadera, zMadera); //posicion y tamaÃ±o 
 			glTranslatef(xPosCama, yPosCama, zPosCama); //figura 
 
 			//dibujamos la cabecera
 			glPushMatrix(); 
 				glTranslatef(9.0,1.5,0.5);
-				glScalef(18.0,3.0,1.0);  //Tamaño de cabecera
+				glScalef(18.0,3.0,1.0);  //TamaÃ±o de cabecera
 				cama.prisma(1.0,1.0,1.0, textMaderaCama.GLindex);
 			glPopMatrix();
 
@@ -1372,7 +1372,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 
 
 			//CASA///////////////////
-			//¨****casa*****
+			//Â¨****casa*****
 			glPushMatrix();
 				glScalef(1.0, 0.5, 1.0);
 				glTranslatef(30, 3, -17.2);
@@ -1773,14 +1773,14 @@ int main ( int argc, char** argv )   // Main Function
   int submenu;
   glutInit            (&argc, argv); // Inicializamos OpenGL
   glutInitDisplayMode (GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH); // Display Mode (Clores RGB y alpha | Buffer Doble )
-  glutInitWindowSize  (500, 500);	// Tamaño de la Ventana
+  glutInitWindowSize  (500, 500);	// TamaÃ±o de la Ventana
   glutInitWindowPosition (0, 0);	//Posicion de la Ventana
   glutCreateWindow    ("Practica 11"); // Nombre de la Ventana
   //glutFullScreen     ( );         // Full Screen
   InitGL ();						// Parametros iniciales de la aplicacion
-  glutDisplayFunc     ( display );  //Indicamos a Glut función de dibujo
-  glutReshapeFunc     ( reshape );	//Indicamos a Glut función en caso de cambio de tamano
-  glutKeyboardFunc    ( keyboard );	//Indicamos a Glut función de manejo de teclado
+  glutDisplayFunc     ( display );  //Indicamos a Glut funciÃ³n de dibujo
+  glutReshapeFunc     ( reshape );	//Indicamos a Glut funciÃ³n en caso de cambio de tamano
+  glutKeyboardFunc    ( keyboard );	//Indicamos a Glut funciÃ³n de manejo de teclado
   glutSpecialFunc     ( arrow_keys );	//Otras
   glutIdleFunc		  ( animacion );
 
